@@ -23,16 +23,17 @@ public class Demo {
 		System.out.println(title);
 		// to get the page source and print it
 		String pageSource = driver.getPageSource(); System.out.println(pageSource);
-		//to get the window handle and print it note- the window handle changes every time we load the page
+		//to get the window handle and print it note :- the window handle changes every time we load the page
 		String windowhandle = driver.getWindowHandle();
 		System.out.println(windowhandle);
-		//
+		//to open other link preset on same web page
 		driver.findElement(By.linkText("compendiumdev")).click();
 		Set<String> windowhandles = driver.getWindowHandles();
 		for(String window : windowhandles) 
 		{
 			System.out.println(window);
 		}
+		driver.quit();
 
 	}
 
